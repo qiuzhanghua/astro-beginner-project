@@ -36,3 +36,13 @@ h1 + h2 {
   opacity: 0.9;
   font-weight: 400;
 }
+
+p,li {
+  font-size: 1rem,
+  color: var(--grey-400);
+  opacity: 0.6;
+}
+
+li {
+  margin: 1rem 0;
+}

@@ -1,7 +1,16 @@
 ---
+import type { MarkdownLayoutProps } from 'astro';
 import Main from './Main.astro';
+type Props = MarkdownLayoutProps<{
+  title: string;
+  subtitle: string;
+}>;
+
+const { title, subtitle } = Astro.props.frontmatter;
 ---
 
 <Main title="Frau Katerina | Blog">
+  <h1>{title}</h1>
+  <h2>{subtitle}</h2>
   <slot />
 </Main>

@@ -1,6 +1,6 @@
 ---
 # title: Understanding Astro
-layout: ../layouts/Main.astro
+layout: ../layouts/Blog.astro
 ---
 - Be present and enjoy now
 - Be driven by values

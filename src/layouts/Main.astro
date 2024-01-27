@@ -2,6 +2,11 @@
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
+
+type Props = {
+  title: string;
+};
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -52,7 +57,7 @@ import '../styles/global.css';
 
       setInitialColourMode(initialColourMode);
     </script>
-    <title>Astro</title>
+    <title>{title}</title>
   </head>
   <body>
     <main>

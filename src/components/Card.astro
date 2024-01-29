@@ -6,10 +6,10 @@ export type Props = {
   gradientTo: string;
 };
 
-const { to, title } = Astro.props;
+const { to, title, gradientFrom, gradientTo } = Astro.props;
 ---
 
-<a href={to} class="card">
+<a href={to} class="card" data-gradient-from={gradientFrom}>
   <div class="card__inner">
     <div class="card__title">
       {title}
@@ -18,9 +18,14 @@ const { to, title } = Astro.props;
   </div>
 </a>
 
-<style>
+<style define:vars={{ gradientFrom, gradientTo }}>
   .card {
     --radius: 10px;
+    background-image: linear-gradient(
+      to right,
+      var(--gradientFrom),
+      var(--gradientTo)
+    );
     padding: 4px;
     border-radius: var(--radius);
     text-decoration: none;
@@ -42,4 +47,16 @@ const { to, title } = Astro.props;
     font-size: 1.2rem;
     color: var(--gray-900);
   }
+  .card__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    color: var(--gray-900);
+  }
 </style>
+
+<script>
+  const gradientFrom = document.querySelector('[data-gradient-from]').dataset
+    .gradientFrom;
+  if (gradientFrom) console.log(gradientFrom);
+</script>

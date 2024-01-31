@@ -61,7 +61,9 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
 </style>
 
 <script>
-  const gradientFrom = document.querySelector('[data-gradient-from]').dataset
-    .gradientFrom;
-  if (gradientFrom) console.log(gradientFrom);
+  const el = document.querySelector('[data-gradient-from]');
+  if (el) {
+    const gradientFrom = (el as HTMLElement).dataset.gradientFrom;
+    console.log(gradientFrom);
+  }
 </script>

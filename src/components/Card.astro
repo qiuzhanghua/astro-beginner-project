@@ -21,6 +21,7 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
 <style define:vars={{ gradientFrom, gradientTo }}>
   .card {
     --radius: 10px;
+
     background-image: linear-gradient(
       to right,
       var(--gradientFrom),
@@ -31,9 +32,11 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
   }
+
   .card:hover {
     transform: scale(0.95);
   }
+
   .card__inner {
     background-color: var(--background);
     padding: 1.5rem;
@@ -41,12 +44,14 @@ const { to, title, gradientFrom, gradientTo } = Astro.props;
     display: flex;
     flex-direction: column;
   }
+
   .card_footer {
     margin: auto 0 0 auto;
     padding-top: 2rem;
     font-size: 1.2rem;
     color: var(--gray-900);
   }
+
   .card__title {
     font-size: 1.2rem;
     font-weight: 500;

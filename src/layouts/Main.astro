@@ -1,7 +1,7 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navigation from '../components/Navigation.astro';
-import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css";
 
 type Props = {
   title: string;
@@ -23,12 +23,12 @@ const { title } = Astro.props;
     />
     <script is:inline>
       /** Represent the toggle theme class with a variable */
-      const DARK_THEME_CLASS = 'dark';
+      const DARK_THEME_CLASS = "dark";
       /** Grab the toggle */
-      const COLOUR_MODE = 'COLOUR_MODE';
+      const COLOUR_MODE = "COLOUR_MODE";
       /** Represent the local storage values by variables */
-      const LIGHT_THEME = 'LIGHT';
-      const DARK_THEME = 'DARK';
+      const LIGHT_THEME = "LIGHT";
+      const DARK_THEME = "DARK";
 
       const rootEl = document.documentElement;
 
@@ -39,7 +39,7 @@ const { title } = Astro.props;
         if (previouslySavedColourMode) {
           return previouslySavedColourMode;
         }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           return DARK_THEME;
         }
         return LIGHT_THEME;

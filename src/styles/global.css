@@ -1,22 +1,23 @@
 html {
   --background: white;
-  --grey-200: #222222;
-  --grey-400: #444444;
-  --grey-600: #333333;
-  --grey-900: #111111;
+  --grey-200: #222;
+  --grey-400: #444;
+  --grey-600: #333;
+  --grey-900: #111;
 }
+
 html.dark {
   --background: black;
   --grey-200: #eaeaea;
   --grey-400: #acacac;
-  --grey-600: #ffffff;
+  --grey-600: #fff;
   --grey-900: #fafafa;
 }
 
 body {
   color: var(--grey-600);
   background: var(--background);
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
   padding: 0 0.5rem; /* Additional body style */
 }
 
@@ -37,8 +38,9 @@ h1 + h2 {
   font-weight: 400;
 }
 
-p,li {
-  font-size: 1rem,
+p,
+li {
+  font-size: 1rem;
   color: var(--grey-400);
   opacity: 0.6;
 }

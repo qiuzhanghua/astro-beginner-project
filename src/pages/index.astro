@@ -1,13 +1,13 @@
 ---
-import Main from '../layouts/Main.astro';
-import Cards from '../components/Cards.astro';
+import Main from "../layouts/Main.astro";
+import Cards from "../components/Cards.astro";
 
-const profilePicture = 'https://picsum.photos/200';
+const profilePicture = "https://picsum.photos/200";
 
 const blogs = await Astro.glob<{
   title: string;
   subtitle: string;
-}>('../pages/blogs/*.md');
+}>("../pages/blogs/*.md");
 ---
 
 <Main title="Frau Katerina">
@@ -31,22 +31,22 @@ const blogs = await Astro.glob<{
   <Cards
     cards={[
       {
-        title: 'Guiding Philosophies for life',
-        to: '/philosophies',
-        gradientFrom: '#818cf8',
-        gradientTo: '#d8b4fe',
+        title: "Guiding Philosophies for life",
+        to: "/philosophies",
+        gradientFrom: "#818cf8",
+        gradientTo: "#d8b4fe",
       },
       {
-        title: 'Summary of my work history',
-        to: '/work-summary',
-        gradientFrom: '#818cf8',
-        gradientTo: '#d8b4fe',
+        title: "Summary of my work history",
+        to: "/work-summary",
+        gradientFrom: "#818cf8",
+        gradientTo: "#d8b4fe",
       },
       {
-        title: 'What I do beyond Tech',
-        to: '/beyond-tech',
-        gradientFrom: '#818cf8',
-        gradientTo: '#d8b4fe',
+        title: "What I do beyond Tech",
+        to: "/beyond-tech",
+        gradientFrom: "#818cf8",
+        gradientTo: "#d8b4fe",
       },
     ]}
   />
@@ -56,13 +56,15 @@ const blogs = await Astro.glob<{
   </div>
 
   <ol class="blogs">
-    {blogs.map((blog) => (
-      <li class="blogs__list">
-        <a class="blog__link" href={blog.url}>
-          {blog.frontmatter.title}
-        </a>
-      </li>
-    ))}
+    {
+      blogs.map((blog) => (
+        <li class="blogs__list">
+          <a class="blog__link" href={blog.url}>
+            {blog.frontmatter.title}
+          </a>
+        </li>
+      ))
+    }
   </ol>
 </Main>
 
@@ -71,7 +73,7 @@ const blogs = await Astro.glob<{
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 1rem 0 3rem 0;
+    padding: 1rem 0:3rem;
   }
 
   .profile__details {
@@ -89,7 +91,7 @@ const blogs = await Astro.glob<{
 
   .featured-blogs {
     margin: 0;
-    padding: 3rem 0 0 0;
+    padding: 3rem 0:0;
   }
 
   .featured-blogs__title {
@@ -118,7 +120,7 @@ const blogs = await Astro.glob<{
     padding: 1rem 0;
     color: var(--grey-200);
     text-decoration: none;
-    transition: opacity: 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
   }
   .blog__link:hover {
     opacity: 0.7;

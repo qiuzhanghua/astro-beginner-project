@@ -1,5 +1,5 @@
 ---
-import ThemeToggler from './ThemeToggler.astro';
+import ThemeToggler from "./ThemeToggler.astro";
 ---
 
 <nav>
@@ -60,7 +60,7 @@ import ThemeToggler from './ThemeToggler.astro';
   const { pathname } = window.location;
   const activeNavigationItem = document.querySelector(`a[href="${pathname}"]`);
   if (activeNavigationItem) {
-    activeNavigationItem.classList.add('active');
+    activeNavigationItem.classList.add("active");
   }
 </script>
 ```

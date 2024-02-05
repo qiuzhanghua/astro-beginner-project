@@ -1,13 +1,13 @@
 ---
-import Main from "../layouts/Main.astro";
-import Cards from "../components/Cards.astro";
+import Main from '../layouts/Main.astro';
+import Cards from '../components/Cards.astro';
 
-const profilePicture = "https://picsum.photos/200";
+const profilePicture = 'https://picsum.photos/200';
 
 const blogs = await Astro.glob<{
   title: string;
   subtitle: string;
-}>("../pages/blogs/*.md");
+}>('../pages/blogs/*.md');
 ---
 
 <Main title="Frau Katerina">
@@ -31,22 +31,22 @@ const blogs = await Astro.glob<{
   <Cards
     cards={[
       {
-        title: "Guiding Philosophies for life",
-        to: "/philosophies",
-        gradientFrom: "#818cf8",
-        gradientTo: "#d8b4fe",
+        title: 'Guiding Philosophies for life',
+        to: '/philosophies',
+        gradientFrom: '#818cf8',
+        gradientTo: '#d8b4fe',
       },
       {
-        title: "Summary of my work history",
-        to: "/work-summary",
-        gradientFrom: "#818cf8",
-        gradientTo: "#d8b4fe",
+        title: 'Summary of my work history',
+        to: '/work-summary',
+        gradientFrom: '#818cf8',
+        gradientTo: '#d8b4fe',
       },
       {
-        title: "What I do beyond Tech",
-        to: "/beyond-tech",
-        gradientFrom: "#818cf8",
-        gradientTo: "#d8b4fe",
+        title: 'What I do beyond Tech',
+        to: '/beyond-tech',
+        gradientFrom: '#818cf8',
+        gradientTo: '#d8b4fe',
       },
     ]}
   />
@@ -73,7 +73,7 @@ const blogs = await Astro.glob<{
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 1rem 0:3rem;
+    padding: 1rem 0 0 3rem;
   }
 
   .profile__details {
@@ -91,7 +91,7 @@ const blogs = await Astro.glob<{
 
   .featured-blogs {
     margin: 0;
-    padding: 3rem 0:0;
+    padding: 3rem 0 0 3rem;
   }
 
   .featured-blogs__title {

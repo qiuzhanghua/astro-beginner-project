@@ -2,7 +2,6 @@
 
 use bun.sh/pnpm to dev/build ...
 
-
 ```sh
 pnpm create astro@latest --template minimal
 ```

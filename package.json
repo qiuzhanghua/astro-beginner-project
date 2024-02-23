@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint --ext .astro src",
     "stylelint": "stylelint src/**/*.astro src/**/*.css",
-    "fmt": "prettier --write . --plugin=prettier-plugin-astro"
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.5",
